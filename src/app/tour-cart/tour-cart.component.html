@@ -1,0 +1,40 @@
+<mat-toolbar id="header" color="primary">
+    <h1>GuidedTours</h1>
+    <nav>
+        <mat-icon routerLink="/">home</mat-icon>
+    </nav>
+</mat-toolbar>
+<section id="tour-content">
+    <div id="tour-detail">
+        <h1>{{tour?.tourName}}</h1>
+        <h3>
+            <mat-icon color="accent" *ngFor="let star of stars">star</mat-icon>
+        </h3>
+        {{tour?.duration}} Days 
+        <img src="../../assets/images/{{tour?.image}}.jpg">
+        <p>{{tour?.description}}</p>
+    </div>
+    <form id="tour-request">
+        <h1>Book this Tour</h1>
+        <h2>Tour Price ${{tour?.tourPrice}} USD &nbsp;<span id="per-tour"> PER TOUR</span></h2>
+        <h3>When are you travelling?</h3>
+        <mat-form-field appearance="legacy">
+            <mat-label>Select Date</mat-label>
+            <input matInput type="date" required placeholder="First Name" name="dateOfTravel" [(ngModel)] = "tourRequest.dateOfTravel">
+        </mat-form-field>
+        <h3>Enter your personal details</h3>
+        <mat-form-field appearance="legacy">
+            <mat-label>Name</mat-label>
+            <input matInput type="text"required placeholder="Name" name="customerName" [(ngModel)] = "tourRequest.customerName">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <mat-label>Email</mat-label>
+            <input matInput type="email"required placeholder="Email" name="customerEmail" [(ngModel)] = "tourRequest.customerEmail">
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <mat-label>Phone</mat-label>
+            <input matInput type="phone"required placeholder="Phone" name="customerPhone" [(ngModel)] = "tourRequest.customerPhone">
+        </mat-form-field>
+        <button mat-flat-button color="primary" (click)="makeRequest()">Make Request</button>
+    </form>
+</section>

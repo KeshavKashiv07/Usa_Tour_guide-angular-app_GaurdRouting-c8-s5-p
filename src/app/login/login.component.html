@@ -1,0 +1,12 @@
+<mat-toolbar id="header" color="primary">
+    <h1>GuidedTours</h1>
+</mat-toolbar>
+<div id="login-form">
+    <h3>If you are a Tour Guide, enter your Tour Guide Code</h3>
+    <mat-form-field appearance="legacy">
+        <mat-label>Enter Tour Guide Code</mat-label>
+        <input matInput name="tourGuideCode" [(ngModel)]="tourGuideCode" placeholder="Tour Guide Code">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="validateTourGuideCode()">Submit</button>
+    <h3>If you are a Visitor, <a routerLink="">click here</a></h3>
+</div>

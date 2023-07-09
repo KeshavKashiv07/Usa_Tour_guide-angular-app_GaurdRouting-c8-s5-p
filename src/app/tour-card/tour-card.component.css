@@ -1,0 +1,30 @@
+.tour-card {
+    width: 19%;
+    margin: 30px 10px ;
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 400px;
+    justify-content: space-between;
+}
+
+.tour-details {
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    letter-spacing: .25px;
+    font-weight: 500;
+    font-size: 1.15em;
+    -webkit-line-clamp: 2;
+}
+
+.tour-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-icon {
+    display: inline;
+    margin-right: 40px;
+}
